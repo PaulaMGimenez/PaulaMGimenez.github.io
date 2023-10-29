@@ -1,0 +1,343 @@
+
+*{
+   
+    box-sizing: border-box;
+   
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+ background-color: black;
+    
+    margin: 0;
+}
+.nombre-pagina{
+    font-family: Bungee Hairline;
+}
+h2{
+    text-align: center;
+    font-family: Bungee Hairline;
+}
+h3{
+    font-family: Bungee Hairline;
+}
+a{
+    text-decoration: none; /*sacamos el color de los links*/
+    color: white;
+    
+}
+ul{list-style: none;}
+
+.cajas{
+    max-width: 1400px;
+    margin: auto;
+}
+header{
+   
+    background-color: black;
+   
+   
+}
+header .titulo{
+    margin: 0;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.6em;
+}
+header .cajas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+    
+}
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+header a:hover{
+    margin-bottom: 5px;
+    background-color: white;
+    text-shadow: #fff;
+    color: black;
+
+    
+}
+#gifi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: #fff;
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) , url("Imagenes/carrusel/viaje.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+#gifi h2{
+    color: white;
+
+}
+#hero h3{
+    color: #fff;
+}
+
+.evidencia{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: #fff;
+    background-color: black;
+}
+.evidencia:hover{
+    background-color: rgb(68, 67, 67);
+}
+
+/*Carrusel*/
+
+
+img{
+    
+    width: 100%;
+    height: 100%;
+
+}
+.carrucelContainer{
+    background-color: black;
+    color: #fff;
+    display:block;
+    width: 100%;
+    position: relative;
+    height: 780px;
+    margin-top: 0;
+    
+
+}
+
+.boton{
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50px;
+    background-color: rgba(0,0,0,0.7);
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    color: #fff;
+    
+}
+.boton:hover{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+
+}
+.atras{
+    left: 2%;
+    top: calc(50% - 70px);
+}
+.adelante{
+    right: 2%;
+    top: calc(50% - 70px);
+}
+
+
+ #cajasDeNoticias{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+ }
+ #cajasDeNoticias .noticias{
+   background-color: rgb(30,30,30);
+  
+    
+ }
+ #cajasDeNoticias p{
+    font-family: Bungee Hairline;
+    color: #fff;
+ }
+ 
+#cajasDeNoticias h2{
+    font-weight: bold;
+    margin-top: 10;
+    font-family: Bungee Hairline;
+}
+ #cajasDeNoticias .cajas {
+    background-color: rgb(30,30,30);
+    padding: 50px 12px;
+    border-radius: 20px;
+ }
+ #cajasDeNoticias .noticia{
+    
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 20px;
+    margin: 30px;
+    
+    
+    border-radius: 20px;
+ 
+    
+
+    
+}
+
+.noticia:first-child{
+    background-color: black;
+}
+
+.noticia:nth-child(2){
+    background-color: black;
+}
+.noticia:nth-child(3){
+    background-color: black;
+}
+
+
+footer{
+    margin-top: 20px;
+    background-color: rgb(134, 130, 130);
+    text-align: center;
+}
+ 
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: black;
+}
+footer.final{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}
+
+#cajasDeNoticias2{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+
+ }
+ #cajasDeNoticias2 .noticias{
+    background-color: rgb(30,30,30);
+   
+     
+  }
+  #cajasDeNoticias2 p{
+     font-family: Bungee Hairline;
+     color: #fff;
+  }
+ #cajasDeNoticias2 h2{
+     font-weight: bold;
+     margin-top: 10;
+     font-family: Bungee Hairline;
+ }
+  #cajasDeNoticias2 .cajas {
+     background-color: rgb(30,30,30);
+     padding: 50px 12px;
+     border-radius: 20px;
+     color: #fff;
+  }
+  #cajasDeNoticias2 .noticia{
+     
+     background-position: center center;
+     background-size: cover;
+     padding: 50px 20px;
+     margin: 30px;
+     margin-top: 100;
+     
+     border-radius: 20px;
+  
+     
+ 
+     
+ }
+ 
+   
+
+
+
+
+
+
+     
+ 
+   .d-block {
+    display: block;
+   }
+   .error{
+    border: 2px dashed red;
+}
+    
+
+@media (min-width: 720px){
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .cajas{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+   
+
+    #cajasDeNoticias .noticias{
+       
+        display: flex;
+        justify-content: center;
+
+    }
+    #cajasDeNoticias p{
+        display: block;
+        margin-bottom: 30px;
+        
+    }
+    #cajasDeNoticias img{
+       width: 250px;
+       height: 150px;
+    }
+    
+    #cajasDeNoticias .noticia{
+        padding: 50px;
+    }
+    #cajasDeNoticias2 .noticias{
+        margin-top: 100px;
+    }
+   
+   
+}
+ 

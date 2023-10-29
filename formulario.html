@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee Hairline">
+    <link rel="stylesheet" href="style.css">
+    <title>Quienes Somos |Naboo News</title>
+</head>
+<body>
+
+     <!--Mi menu--> 
+     <header>
+        <div class="cajas">
+            <a href="C:\Users\Usuario\Documents\NetBeansProjects\PaulaMGimenez.github.io\index.html" class="titulo">
+                 <p class="nombre-pagina">NABOO NEWS</p>
+
+
+            </a>
+            <nav>
+                <!--debo agregar links a las otras paginas--> 
+                
+            
+                <a href="C:\Users\Usuario\Documents\NetBeansProjects\PaulaMGimenez.github.io\index.html#cajasDeNoticias" class="nav-link">Noticias</a></li>
+                <a href="C:\Users\Usuario\Documents\NetBeansProjects\PaulaMGimenez.github.io\nosotros.html" class="nav-link">Quienes Somos</a></li>
+                <a href="C:\Users\Usuario\Documents\NetBeansProjects\PaulaMGimenez.github.io\formulario.html" class="nav-link">Contacto</a></li>
+                 
+             </nav>
+        </div>
+    </header>
+
+    <section id="cajasDeNoticias2">
+        <div class="cajas">
+            <div class="noticias">
+        <div class="noticia">
+            <h2>Contactanos</h2>
+            
+            <form onsubmit="return saludar()" id="formu">
+                
+             <label class="d-block" for="fNombre">Nombre</label>
+             <input  id="fNombre" name="fNombre"/>
+             <label class="d-block" for="fCorreo">Correo Electronico</label>
+             <input  id="fCorreo" name="fCorreo" />
+             <label class="d-block " for="fAsunto">Asunto</label>
+             <input  id="fAsunto" name="fAsunto"/>
+             <label class="d-block"  for="fComentario">Comentario:</label>
+             <textarea   id="fComentario" name="fComentario" rows="10" cols="30"  maxlength="200" ></textarea>
+             
+             <button class="" type="submit" id="botonenviar">
+                 Enviar
+             </button>
+            </form>
+            <p id="Confirmar"></p>
+            
+        <ul id="listaErrores">
+        </ul> 
+            
+
+        </div>
+        
+    </div>
+   
+</div>
+   
+</section>
+
+           
+            
+
+
+
+   
+    <script >
+        const Confirmar = document.getElementById("Confirmar");
+const listaErrores = document.getElementById("listaErrores");
+const botonenviar = document.getElementById("botonenviar");
+
+
+function saludar(){
+ let fNombre = document.getElementById("fNombre");
+ let nombre = fNombre.value.trim();
+ let fCorreo = document.getElementById("fCorreo");
+ let correo = fCorreo.value.trim();
+ let fAsunto = document.getElementById("fAsunto");
+ let asunto =fAsunto.value.trim();
+ let fComentario= document.getElementById("fComentario");
+ let comentario= fComentario.value.trim();
+ let errores = [];
+ let campo_error = null;
+ 
+ let formu = document.getElementById("formu");
+ /*
+ for (v of frm.children) {
+  v.classList.remove("error");
+ }*/
+ 
+ for (v of formu.querySelectorAll("input,select,div")) {
+  v.classList.remove("error");
+ }
+ 
+ if(nombre == "") {
+  errores.push("Ingrese su nombre");
+  campo_error = fNombre;
+  fNombre.classList.add("error");
+ }
+ if(nombre.length >25){
+ errores.push("El campo nombre tiene mas de 25 caracteres, mejor escriba su apodo!");
+ compo_error=fNombre;
+ fNombre.classList.add("error");
+ }
+ 
+ if(correo == "") {
+  errores.push("Ingrese su Correo Electronico");
+  campo_error = fCorreo;
+  fCorreo.classList.add("error");
+ }
+ let expresioncorreo= /^\w+@\w+(\.\w{2,4})+$/;
+ 
+ if(expresioncorreo.test(correo)==false){
+ errores.push("Ingrese un correo valido");
+ campo_error=fCorreo;
+ fCorreo.classList.add("error");
+ }
+ if(asunto == "") {
+  errores.push("Ingrese el asunto de su mensaje");
+  campo_error = fAsunto;
+  fAsunto.classList.add("error");
+ }
+ 
+ if(asunto.length >25){
+ errores.push("El campo Asunto tiene mas de 25 caracteres");
+ compo_error=fAsunto;
+ fAsunto.classList.add("error");
+ }
+ if(comentario == ""){
+ errores.push("Ingrese el comentario!");
+ campo_error=fComentario;
+ fComentario.classList.add("error");
+ }
+ 
+ listaErrores.innerHTML = "";
+ if(errores.length > 0) {
+  for(let i=0;i<errores.length;i++) {
+   let lista = document.createElement("lista");
+   lista.innerHTML = errores[i]+",<br>";   
+   listaErrores.appendChild(lista);
+  }
+  if(campo_error != null) {
+   campo_error.focus();
+  }
+  return false;
+ 
+ }
+ let confirmacion = `Gracias ${nombre} por tu mensaje! Pronto te responderemos`;
+ Confirmar.innerHTML = confirmacion;
+ return false;
+}
+
+    </script>
+</body>
+</html>
